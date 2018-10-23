@@ -9,21 +9,40 @@
     <name>Spring Cloud Eureka</name>
     <description>Spring Cloud Eureka Server and Sample Clients</description>
 
-    <modules>
-        <module>spring-cloud-eureka-server</module>
-        <module>spring-cloud-eureka-client</module>
-        <module>spring-cloud-eureka-feign-client</module>
-    </modules>
-
-    <parent>
-        <groupId>com.baeldung.spring.cloud</groupId>
-        <artifactId>spring-cloud</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-        <relativePath>..</relativePath>
-    </parent>
 
     <properties>
-        <spring-boot-maven-plugin.version>1.4.2.RELEASE</spring-boot-maven-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Dalston.SR2</spring-cloud.version>
     </properties>
+
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.6.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-eureka-server1</module>
+        <module>spring-cloud-eureka-client</module>
+        <module>spring-cloud-eureka-client1</module>
+        <module>spring-cloud-eureka-client2</module>
+    </modules>
 
 </project>

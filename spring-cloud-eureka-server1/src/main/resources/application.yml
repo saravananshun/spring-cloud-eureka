@@ -1,0 +1,10 @@
+server:
+  port: 8762
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  instance:
+    hostname: localhost
+    virtual-host-name: localhost

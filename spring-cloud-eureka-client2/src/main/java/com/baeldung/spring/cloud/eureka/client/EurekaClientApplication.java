@@ -19,8 +19,8 @@ public class EurekaClientApplication {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        AppComponent component  =  context.getBean(AppComponent.class);
-        component.greeting();
+        //AppComponent component  =  context.getBean(AppComponent.class);
+        //component.greeting();
     }
 
 
